@@ -1,0 +1,1 @@
+# UCI-Daily-and-Sports-Activities-Dataset
