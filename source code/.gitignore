@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.DS_Store
+*.zip
+*.tex
+report/final_project_files/*
+data/raw/*

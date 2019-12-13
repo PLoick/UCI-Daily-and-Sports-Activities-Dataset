@@ -1,0 +1,61 @@
+Preprocessing Checklist
+
+Before experimenting with various data mining techniques, you should do some exploratory analysis
+and pre-processing. Here are some general guidelines; not everything is necessarily applicable to all
+datasets, and further methods may also be useful.
+
+- Is the full dataset relevant and necessary? Remove instances that seem erroneous or
+redundant. If the dataset is too large to be analysed with your tools, you can work with a
+smaller sample. (This can be particularly useful for the accelerometer dataset that is really
+large.)
+
+  There are only 9120 observations so there is no need to take a sample
+  The only observations that could be considered "erroneous" would be if the series for
+  one particular sample does not match the same time series pattern as that of the same
+  activity. We would argue that it is perhaps more important to retain this variance
+  for predictive purposes.
+
+- If you are working on a classification problem, and the representation of the different
+classes is highly imbalanced, you may want to resample the data to represent the classes
+more equally.
+
+  The target classes are perfectly distributed as a result of the experiment design.
+
+- Are there any missing values? (How they are shown may vary from dataset to dataset.) You
+have to decide how you interpret missing values and handle them accordingly.
+
+  No missingness for any sensor readings.
+
+- Is the format of each attribute (nominal or numeric) appropriate to its contextual meaning?
+Is the range of the numeric attributes appropriate? Carry out conversions and
+normalizations as appropriate.
+
+  All attributes are numeric.
+  
+  Currently no normalisation/scaling being performed (other than PCA).
+  Perhaps we should normalise values across each of the three sensor types?
+  eg. the range of values for accelerometers is very different to mag and gyro
+
+- Are there any obvious outliers? Instances with values very different from the typical range
+might represent input errors – is there evidence for that in the data?
+
+  No
+
+- Are there any apparently irrelevant attributes that should be removed?
+
+  No. We are not including "participant id" as a training feature.
+
+- Does it make sense to work with a smaller set of attributes?
+
+  Yes, the models will make use of feature extraction from the time-series followed
+  by further PCA dimension-reduction.
+
+In the report, describe your dataset – what types of attributes it has, the value ranges, interesting
+characteristics, relevant features, etc. Your report should describe all preprocessing steps you
+performed, with justification of the decisions you made. You can carry out the preprocessing steps in
+R or otherwise.
+
+  See Exploratory Analysis and Preprocessing sections.
+
+
+
