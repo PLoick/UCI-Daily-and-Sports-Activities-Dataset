@@ -1,0 +1,14 @@
+#$ -V
+#$ -N init_h2o
+#$ -m eans
+#$ -M "r.williamson@lse.ac.uk"
+#$ -wd /users/willia76/MA429/datamining_finalproject
+#$ -l h_vmem=150G
+#$ -l h_rt=00:00:40
+
+module add apps/R apps/oraclejdk
+#java -Xmx1240m -Xms1240m -version
+nohup java -Xmx100g -Xms100g -jar /users/willia76/gridware/share/R/3.4.2/h2o/java/h2o.jar </dev/null > h2o_log"$JOB_ID".log &
+sleep 5
+Rscript fabian/init_h2o.R
+exit 0

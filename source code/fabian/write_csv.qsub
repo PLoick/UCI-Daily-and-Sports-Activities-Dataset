@@ -1,0 +1,9 @@
+#$ -V
+#$ -N write_csv
+#$ -m eans
+#$ -M r.williamson@lse.ac.uk
+#$ -wd /users/willia76/MA429/datamining_finalproject
+#$ -l mem_free=3G
+module add apps/R
+git pull
+Rscript fabian/write_csv.R

@@ -1,0 +1,19 @@
+install.packages(c(
+  "dplyr",
+  "tidyr",
+  "purrr",
+  "stringr",
+  "forcats",
+  "pROC",
+  "caret",
+  "magrittr",
+  "kableExtra",
+  "knitr",
+  "dummies",
+  "data.table",
+  "tensorflow",
+  "keras",
+  "rmarkdown",
+  "knitr",
+  "tidyverse"
+))
