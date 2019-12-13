@@ -1,0 +1,74 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# MA429 Final Project
+
+This repository is for the submission of the MA429 Final Project for Group 1.
+
+## Project Outline & Deadlines
+
+```{r, echo=FALSE}
+library(kableExtra)
+library(knitr)
+
+outline = data.frame(
+  Items = c("Introduction", "Description of Dataset", "Literature Review", "Data Load/Conversion", "Descriptive Statistics", "Dimensionality Reduction (PCA & t-SNE)", "Performance Metrics", "Algorithms", "   Neural Network", "   Logistic regression", "   Random Forest", "XGBoost", "   Model Ensembles", "Limitations", "Conclusion"),
+  Person = c("Philipp", "Philipp", "Philipp", "Jin", "Ruaridh", "Philipp", "Jin", "", "Philipp", "Jin", "Jin", "Ruaridh", "All", "Jin", "Philipp"),
+  Deadline = c("14/04", "04/04", "04/04", "27/03", "04/04", "04/04", "04/04", "", "11/04", "11/04", "11/04", "14/04", "14/04", "14/04", "14/04")
+)
+
+kable(outline)
+```
+
+## Report Plan
+
+### Executive Summary
+
+- One page to summarise problem setting and main conclusions
+- No technical details
+
+### Main
+
+#### Introduction (Philipp)
+
+- Outline report structure
+- Brief overview of dataset and methods (no details).
+- Review of existing literature
+- What are we doing differently?
+- Project objectives
+
+#### Data Understanding
+
+- Explain literature data transformations in detail (Philipp)
+- Exploratory analysis incl. visuals (Ruaridh)
+- Time series metrics and possible additional features (Ruaridh)
+
+#### Data Preparation
+
+- PCA vs t-SNE incl. visuals (Philipp)
+- Overview of dataset transformation (Ruaridh)
+
+#### Modelling
+
+- Explain performance metrics (Jin)
+- Outline all models chosen (All)
+- Explain methods not covered in MA429 (Ruaridh - XGBoost; Philipp - RNN if included)
+- Justify hyperparameters chosen for calibration and otherwise (All)
+
+#### Evaluation
+
+- Compare performance of models across all datasets (Philipp)
+- Graphical summary of performance metrics. (Ruaridh)
+- Pros and cons of each model choice and dataset choice (Jin)
+- Practical consequences, impacts, surprising/interesting discoveries (Ruaridh)
+- Overall conclusion and further work (Philipp)
